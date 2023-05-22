@@ -10,6 +10,12 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import com.pudge.bean.Re;
+import com.pudge.network.RetrofitClient;
+import com.pudge.network.service.TestService;
+
+import io.reactivex.rxjava3.functions.Consumer;
+
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -22,5 +28,14 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.pudge", appContext.getPackageName());
+        RetrofitClient.getInstance().getService(TestService.class).getGoods().subscribe(new Consumer<Re>() {
+            @Override
+            public void accept(Re re) throws Throwable {
+                System.out.println(re);
+            }
+        });
+        while(true){
+
+        }
     }
 }
