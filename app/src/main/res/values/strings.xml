@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pudge</string>
+    <string name="test">测试网络</string>
 </resources>
