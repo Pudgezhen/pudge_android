@@ -1,6 +1,7 @@
 package com.example.pudge;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -28,14 +29,16 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.pudge", appContext.getPackageName());
-        RetrofitClient.getInstance().getService(TestService.class).getGoods().subscribe(new Consumer<Re>() {
-            @Override
-            public void accept(Re re) throws Throwable {
-                System.out.println(re);
-            }
-        });
-        while(true){
-
-        }
+        Log.i("test","测试");
+        while(true){}
+//        RetrofitClient.getInstance().getService(TestService.class).getGoods().subscribe(new Consumer<Re>() {
+//            @Override
+//            public void accept(Re re) throws Throwable {
+//                System.out.println(re);
+//            }
+//        });
+//        while(true){
+//
+//        }
     }
 }
