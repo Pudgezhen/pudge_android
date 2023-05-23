@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Pudge" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
     </style>
 
-    <style name="Theme.Pudge" parent="Base.Theme.Pudge" />
+    <!-- 设置启动展示图片-->
+    <style name="Theme.Pudge" parent="Base.Theme.Pudge" >
+        <item name="android:windowBackground">@drawable/start</item>
+<!--        设置全屏-->
+        <item name="android:windowFullscreen">true</item>
+<!--  底层按键设置透明  -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+
 </resources>
